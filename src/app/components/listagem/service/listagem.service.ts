@@ -14,7 +14,6 @@ export class ListagemService {
     return this.requisicaoApi.get<Moeda[]>('localhost:3000/api/cripto/obter-moeda');
 
   }
-
-
+  
 
 }
