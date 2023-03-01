@@ -8,18 +8,35 @@ import { ListagemService } from './service/listagem.service';
   styleUrls: ['./listagem.component.css']
 })
 
+
+/* O implements On Init diz para o meu
+componente que ele tem uma classe de 
+inicialização e que ele deve passar por 
+ela antes de executar qual quer outra coisa */
 export class ListagemComponent implements OnInit{
+
+  id:number = 14;
+  moedasExibirNoHtml: Moeda[] = [];
+  router: any;
   constructor(private moedaService: ListagemService){
 
   }
-  /*Tudo que está dentro desta função será executado primeiro*/
+  /*Quando inicar, ou seja, tudo que está dentro desta função será executado primeiro*/
   ngOnInit() {
 
   /* Indo no serviço obter moedas e aguardando o retorno da api com o subscribe que recebe uma função com o parametro do tipo retorno*/ 
-    this.moedaService.obterMoedas().subscribe((moedas: Moeda[]) => {
+  this.moedaService.obterMoedas().subscribe((moedasVindoDaApi: Moeda[]) => {
 
-      var teste = moedas;
-      debugger;
-    })
-  }
+    this.moedasExibirNoHtml = moedasVindoDaApi
+
+  })
+}
+
+detalhar(id:number){
+
+  //redirecionamento p/ alguma rota da aplicação//
+    this.router.navigateByUrl(`detalhar/${id}`)
+
+}
+
 }

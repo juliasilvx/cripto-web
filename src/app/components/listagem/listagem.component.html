@@ -1,1 +1,16 @@
-<p>listagem works!</p>
+<table class="table table-success table-striped">
+    <thead>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let moeda of moedasExibirNoHtml">
+            <td>{{moeda.id}}</td>
+            <td>{{moeda.nome}}</td>
+            <td>{{moeda.precoCompraVenda}}</td>
+            <td><a href="#" (click)="detalhar(moeda.id)">detalhe</a></td>
+        </tr>
+    </tbody>
+</table>
