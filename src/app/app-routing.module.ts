@@ -7,7 +7,7 @@ const routes: Routes = [
   
 //path: caminho, ex: http://localhost:4200/default//
 {path:'detalhar/:id', component: DetalheComponent}, 
-{path:'listagem', component: ListagemComponent}, 
+{path:'', component: ListagemComponent}, 
 
 
 ];

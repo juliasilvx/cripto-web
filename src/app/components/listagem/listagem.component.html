@@ -1,8 +1,8 @@
 <table class="table table-success table-striped">
     <thead>
         <th>Id</th>
-        <th>Nome</th>
-        <th>Preço</th>
+        <th>Nome </th>
+        <th>Preço <i class="bi bi-currency-dollar"></i></th>
         <th></th>
     </thead>
     <tbody>
@@ -10,7 +10,7 @@
             <td>{{moeda.id}}</td>
             <td>{{moeda.nome}}</td>
             <td>{{moeda.precoCompraVenda}}</td>
-            <td><a href="#" (click)="detalhar(moeda.id)">detalhe</a></td>
+            <td><a href="javascript: return false;" (click)="detalhar(moeda.id)"><i class="bi bi-pencil-square"></i></a></td>
         </tr>
     </tbody>
 </table>

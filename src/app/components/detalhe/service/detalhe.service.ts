@@ -11,7 +11,7 @@ export class DetalheService {
   constructor(private requisicaoApi: HttpClient) { }
 
   obterMoedaDetalhe(id: number): Observable<Moeda> {
-    return this.requisicaoApi.get<Moeda>(`/api/obter-moeda/peloId?id=${id}`);
+    return this.requisicaoApi.get<Moeda>(`/api/cripto/obter-moeda/peloId?id=${id}`);
   }
 
 }

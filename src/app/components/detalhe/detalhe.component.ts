@@ -8,17 +8,18 @@ import { DetalheService } from './service/detalhe.service';
   styleUrls: ['./detalhe.component.css']
 })
 export class DetalheComponent implements OnInit {
+  moedaDetalheHtml = {} as Moeda;
 
   constructor(private service: DetalheService) { }
 
 
   ngOnInit(): void {
     
-    var id = 0;
+    var id = 1;
 
     this.service.obterMoedaDetalhe(id).subscribe((moedaDetalhe: Moeda) => {
-
-        })
+      this.moedaDetalheHtml = moedaDetalhe;
+  })
 
   }
 

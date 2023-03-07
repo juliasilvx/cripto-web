@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Moeda } from 'src/app/models/moeda';
 import { ListagemService } from './service/listagem.service';
 
@@ -17,8 +18,7 @@ export class ListagemComponent implements OnInit{
 
   id:number = 14;
   moedasExibirNoHtml: Moeda[] = [];
-  router: any;
-  constructor(private moedaService: ListagemService){
+  constructor(private moedaService: ListagemService, private router: Router){
 
   }
   /*Quando inicar, ou seja, tudo que está dentro desta função será executado primeiro*/
